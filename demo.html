@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.marquee.js"></script>
+	<style type="text/css">
+		* { margin: 0; padding: 0; }
+		.marquee { margin: 0 auto; overflow: hidden; zoom: 1; border: 1px solid #ccc; margin-bottom: 30px; }
+        .marquee-list li {height: 35px;line-height:35px;display: inline; }
+		
+		.marquee.landscape { width:1000px; }
+		.landscape .marquee-list li { min-width: 180px; margin-right: 20px;}
+
+		.marquee.vertical { width:250px;  height: 200px; }
+		.vertical .marquee-list li { display: block; }
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$(".landscape").marquee();
+			$(".vertical").marquee({ direction:"up", speed: 50, width:10000 });
+		});
+	</script>
+</head>
+<body>
+	<code>
+		$(".landscape").marquee();
+	</code>
+	<div class="marquee landscape" data-direction="left" data-speed="50" data-width="10000">
+		<div class="marquee-container">
+			<ul class="marquee-list">
+                <li>13********7 投资额 100.00万</li>
+                <li>Ma*********y 投资额 55.25万</li>
+                <li>ev****3 投资额 30.00万</li>
+                <li>fe*****6 投资额 22.29万</li>
+	        </ul>
+	    </div>
+	</div>
+	<code>
+		$(".landscape").marquee();
+	</code>
+	<div class="marquee landscape" data-direction="right" data-speed="50" data-width="10000">
+		<div class="marquee-container">
+			<ul class="marquee-list">
+                <li>13********7 投资额 100.00万</li>
+                <li>Ma*********y 投资额 55.25万</li>
+                <li>ev****3 投资额 30.00万</li>
+                <li>fe*****6 投资额 22.29万</li>
+	        </ul>
+	    </div>
+	</div>
+	<code>
+		$(".vertical").marquee({ direction:"up", speed: 50 });
+	</code>
+	<div class="marquee vertical">
+		<div class="marquee-container">
+			<ul class="marquee-list">
+                <li>13********7 投资额 100.00万</li>
+                <li>ho********d 投资额 65.10万</li>
+                <li>Ma*********y 投资额 55.27万</li>
+                <li>ev****3 投资额 30.00万</li>
+                <li>fe*****6 投资额 22.29万</li>
+                <li>sz*****s 投资额 21.48万</li>
+                <li>bu*******a 投资额 18.26万</li>
+                <li>wa***r 投资额 11.00万</li>
+                <li>ls****4 投资额 10.11万</li>
+                <li>ho***z 投资额 10.00万</li>
+                <li>贺娟***2 投资额 10.00万</li>
+                <li>李*光 投资额 10.00万</li>
+                <li>an*******a 投资额 10.00万</li>
+	        </ul>
+	    </div>
+	</div>
+	<code>
+		带参数时，忽略dom元素的data-*属性 <br/>
+		垂直滚动，忽略width参数 <br/>
+		$(".vertical").marquee({ direction:"up", speed: 50 });
+	</code>
+	<div class="marquee vertical" data-direction="up" data-speed="50" data-width="500">
+		<div class="marquee-container">
+			<ul class="marquee-list">
+                <li>13********7 投资额 100.00万</li>
+                <li>ho********d 投资额 65.10万</li>
+                <li>Ma*********y 投资额 55.27万</li>
+                <li>ev****3 投资额 30.00万</li>
+                <li>fe*****6 投资额 22.29万</li>
+                <li>sz*****s 投资额 21.48万</li>
+                <li>bu*******a 投资额 18.26万</li>
+                <li>wa***r 投资额 11.00万</li>
+                <li>ls****4 投资额 10.11万</li>
+                <li>ho***z 投资额 10.00万</li>
+                <li>贺娟***2 投资额 10.00万</li>
+                <li>李*光 投资额 10.00万</li>
+                <li>an*******a 投资额 10.00万</li>
+	        </ul>
+	    </div>
+	</div>
+	<div>
+		调用：$(选择器).marquee({});<br/>
+		参数：方向 direction： 字符型  left | right | up<br/>
+			  速度 speed：数值型<br/>
+			  宽度 width： marquee-container的宽度<br/>
+	</div>
+</body>
+</html>
